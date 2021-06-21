@@ -1,36 +1,28 @@
 #include <iostream>
+#include <stdio.h>
 #include "investimento.cpp"
 
 using namespace std;
 
 
-Tinvestimento dataIn(){
- Tinvestimento obterDados;
 
- cout << "Digite o valor do Investimento: ";
- cin >> obterDados.montInvest;
- cout << "Digite a taxa de juros anual em %: ";
- cin >> obterDados.jurosAno;
- cout << "Digite o periodo do Investimento em meses: ";
- cin >> obterDados.periodInvest;
+void imprimeRend(tInvest rend){
 
- return obterDados;
+cout << "Montante de Rendimento Simples: " << rend.montSimples << endl;
+cout << "Montante de Rendimento Composto: " << rend.montComposto << endl;
+cout << "Taxa de juros Ano para Mes: " << rend.convertAnoMes;
 }
-
-Tinvestimento dataOut(){
- Tinvestimento plotaDados;
-
- cout << "Montante de rendimentos Simples: " << montSimples << ;
-
-//return 0;
-}
-
-
 
 int main() {
+  tInvest teste;
 
-  dataIn();
-  saidaSimples();
-  dataOut();
-  
+  //dataIn();
+
+  teste.montSimples = 6;   // rendimento com juros simples
+  teste.montComposto = 7;  // rendimento com juros composto
+  teste.convertAnoMes = 8; // conversão de juros Ano para mês
+ 
+  imprimeRend(tInvest teste);
+
+  return 0;
 }
